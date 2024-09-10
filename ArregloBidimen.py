@@ -67,7 +67,6 @@ def menu():
             mes = int(input("Ingresa el mes (1-12): "))
             ventas = float(input(f"Ingresa las ventas para {departamento} en el mes {mes}: "))
             tienda.insertar_ventas(departamento, mes, ventas)
-
         elif opcion == "2":
             departamento = input("Ingresa el departamento (ropa, deportes, jugueteria): ").lower()
             metas = []
@@ -75,31 +74,23 @@ def menu():
                 meta = float(input(f"Inserta la meta de ventas para el mes {i+1}: "))
                 metas.append(meta)
             tienda.insertar_metas(departamento, metas)
-
         elif opcion == "3":
             departamento = input("Ingresa el departamento (ropa, deportes, jugueteria): ").lower()
             mes = int(input("Ingresa el mes (1-12): "))
             ventas = tienda.buscar_venta(departamento, mes)
             if ventas is not None:
                 print(f"Las ventas de {departamento} en el mes {mes} son: {ventas}")
-
         elif opcion == "4":
             departamento = input("Ingresa el departamento (ropa, deportes, jugueteria) a eliminar: ").lower()
             tienda.eliminar_ventas_departamento(departamento)
             print(f"Las ventas del departamento {departamento} han sido eliminadas.")
-
         elif opcion == "5":
             tienda.mostrar_ventas_matriz()
-
         elif opcion == "6":
             tienda.mostrar_metas_matriz()
-
         elif opcion == "7":
             print("Saliendo del programa...")
             break
-
         else:
             print("Opción no válida. Por favor, selecciona una opción del menú.")
-
-# Ejecutar el menú
-menu()
+menu() # Ejecutar el menú
