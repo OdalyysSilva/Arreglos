@@ -1,4 +1,4 @@
-//#Hacer un arreglo bidimencional que me muestre las ventas del todo el año, 
+//#Hacer un arreglo bidimencional que me muestre las ventas del todo el aÃ±o, 
 //mensuales, del departamento de ropa, deportes, jugueteria
 //#Crea metodos para insertar las metas por departamento, aparte para buscar un elemento 
 //particular y un metodo para eliminar las ventas de un departamento en particular
@@ -8,16 +8,13 @@ public class Tienda {
     // Constantes
     final static int Meses = 12;
     final static int Depart = 3;
-
     // Arreglo con los nombres de los meses
     static String[] NomMes = {
         "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
         "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
     };
-
     // Crear una matriz para almacenar las ventas
     static double[][] Ventas = new double[Depart][Meses];
-
     // Crear un objeto Scanner para ingresar datos
     static Scanner scanner = new Scanner(System.in);
 
@@ -34,13 +31,12 @@ public class Tienda {
         
         // Eliminar ventas
         System.out.println("\nEliminar ventas de un departamento:");
-        System.out.print("Ingrese el número del departamento (1-3): ");
+        System.out.print("Ingrese el nÃºmero del departamento (1-3): ");
         int dept = scanner.nextInt();
         ElimVentasDepart(dept - 1);
         MostTablaVentas();
     }
-
-    // Método para ingresar las ventas
+    // MÃ©todo para ingresar las ventas
     public static void IngreVentas() {
         for (int dept = 0; dept < Depart; dept++) {
             System.out.println("Ingrese las ventas para el Departamento " + (dept + 1) + ":");
@@ -51,8 +47,7 @@ public class Tienda {
             System.out.println();
         }
     }
-
-    // Método para mostrar las ventas en formato de tabla
+    // MÃ©todo para mostrar las ventas en formato de tabla
     public static void MostTablaVentas() {
         System.out.println("%-12s"+ "Mes");
         for (int dept = 0; dept < Depart; dept++) {
@@ -68,8 +63,7 @@ public class Tienda {
             System.out.println();
         }
     }
-
-    // Método para insertar las metas por departamento
+    // MÃ©todo para insertar las metas por departamento
     public static void InsertMetas() {
         System.out.println("\nIngrese las metas para cada departamento:");
         for (int dept = 0; dept < Depart; dept++) {
@@ -80,8 +74,7 @@ public class Tienda {
             }
         }
     }
-
-    // Método para buscar un valor específico en la matriz de ventas
+    // MÃ©todo para buscar un valor especÃ­fico en la matriz de ventas
     public static void BuscarElemento(double Valor) {
         boolean encontrado = false;
         for (int dept = 0; dept < Depart; dept++) {
@@ -97,8 +90,7 @@ public class Tienda {
             System.out.println("El valor " + Valor + " no fue encontrado en las ventas.");
         }
     }
-
-    // Método para eliminar las ventas de un departamento
+    // MÃ©todo para eliminar las ventas de un departamento
     public static void ElimVentasDepart(int dept) {
         if (dept >= 0 && dept < Depart) {
             for (int mes = 0; mes < Meses; mes++) {
@@ -106,8 +98,7 @@ public class Tienda {
             }
             System.out.println("Ventas del Departamento " + (dept + 1) + " eliminadas.");
         } else {
-            System.out.println("Número de departamento inválido.");
+            System.out.println("NÃºmero de departamento invÃ¡lido.");
         }
-        System.exit(0);
     }
 }
