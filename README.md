@@ -10,10 +10,9 @@
 ** insertar_metas: Permite ingresar metas de ventas para un departamento. Verifica que el departamento sea válido y que las metas correspondan a los 12 meses. Si la validación es correcta, actualiza las metas; si no, imprime un mensaje de error.
 
 **buscar_venta: Busca y devuelve las ventas de un departamento para un mes específico. Verifica que el departamento sea válido y que el mes esté en el rango 1-12.
-Si la validación es correcta, devuelve el valor de ventas; si no, imprime un mensaje de error y devuelve None.
+Si la validación es correcta, devuelve el valor de ventas; si no, imprime un mensaje de error.
 
-** eliminar_ventas_departamento: Elimina (pone a 0) todas las ventas de un departamento específico.
-Verifica que el departamento sea válido.
+** eliminar_ventas_departamento: Elimina en cero todas las ventas de un departamento específico.
 Si la validación es correcta, restablece las ventas del departamento a 0; si no, imprime un mensaje de error.
 
 ** mostrar_ventas_matriz: Imprime una tabla con las ventas de todos los departamentos por mes.
