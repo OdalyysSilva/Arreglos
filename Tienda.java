@@ -3,7 +3,7 @@
 //#Crea metodos para insertar las metas por departamento, aparte para buscar un elemento 
 //particular y un metodo para eliminar las ventas de un departamento en particular
 
-//import java.util.Scanner;
+import java.util.Scanner;
 public class Tienda {
     // Constantes
     final static int Meses = 12;
